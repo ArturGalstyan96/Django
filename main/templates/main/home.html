@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+
+{% block name %}Home page{% endblock %}
+
+
+{% block body %}
+    {% for i in Tour_List %}
+        <h3>{{ i.model }}</h3>
+        <img src="{{ i.img.url }}" width="300px" alt="">
+        <h5>{{ i.price }}</h5>
+    {% endfor %}    
+{% endblock %}
